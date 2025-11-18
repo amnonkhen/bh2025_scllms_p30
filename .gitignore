@@ -13,6 +13,12 @@
 reports/
 results/
 output/
+pipelines/outputs/*.nf/*
+pipelines/work
+work
+!pipelines/outputs/*/nextflow.config
+!pipelines/outputs/*/ro-crate-metadata.json
+*arc
 
 # python
 __pycache__/

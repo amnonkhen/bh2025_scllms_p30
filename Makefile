@@ -56,6 +56,13 @@ scgpt: download-data download-model ## Run the Nextflow pipeline
 			-main-script ./workflows/scgpt_fine_tuning_cell_types_workflow.nf \
 			--container_image $(DOCKER_TAG)
 
+scgpt-test: #download-data download-model ## Run the Nextflow pipeline
+@cd $(PIPELINE_DIR) && \
+nextflow run . \
+		-main-script ./workflows/test_scgpt_fine_tuning_cell_types_workflow.nf \
+		--container_image $(DOCKER_TAG) \
+		-profile with_prov,test_scgpt_fine_tuning_cell_types_workflow
+
 test: ## Run with test parameters
 	$(MAKE) run INPUT_VALUE=test PROCESSING_MODE=test
 

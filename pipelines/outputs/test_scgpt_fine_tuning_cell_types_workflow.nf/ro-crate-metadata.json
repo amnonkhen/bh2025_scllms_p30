@@ -1,0 +1,400 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ]
+        },
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2025-11-18",
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/wfrun/process/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/workflow/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wfrun/provenance/0.1"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+                }
+            ],
+            "name": "Workflow run of test_scgpt_fine_tuning_cell_types_workflow.nf",
+            "hasPart": [
+                {
+                    "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf"
+                },
+                {
+                    "@id": "https://spdx.org/licenses/MIT"
+                },
+                {
+                    "@id": "nextflow.config"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/scripts/scgpt/config.yml"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/model/pan_cancer"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/data"
+                },
+                {
+                    "@id": "silly_hilbert/save/out.txt"
+                }
+            ],
+            "mainEntity": {
+                "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf"
+            },
+            "mentions": [
+                {
+                    "@id": "#596cab9c-2d63-4db9-bc4c-4dce183b04b3"
+                },
+                {
+                    "@id": "#task/ba953db9477544a55b990c7ae11eb2d5"
+                },
+                {
+                    "@id": "#task/ba953db9477544a55b990c7ae11eb2d5/save/out.txt"
+                },
+                {
+                    "@id": "#publish/ba953db9477544a55b990c7ae11eb2d5/save/out.txt"
+                }
+            ],
+            "license": "https://spdx.org/licenses/MIT"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/process/0.1",
+            "@type": "CreativeWork",
+            "name": "Process Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+            "@type": "CreativeWork",
+            "name": "Workflow Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wfrun/provenance/0.1",
+            "@type": "CreativeWork",
+            "name": "Provenance Run Crate",
+            "version": "0.1"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+            "@type": "CreativeWork",
+            "name": "Workflow RO-Crate",
+            "version": "1.0"
+        },
+        {
+            "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow",
+                "HowTo"
+            ],
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE"
+            },
+            "name": "test_scgpt_fine_tuning_cell_types_workflow.nf",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow"
+            },
+            "encodingFormat": "application/nextflow",
+            "runtimePlatform": "Nextflow 25.10.0",
+            "hasPart": [
+                {
+                    "@id": "#module/fine_tuning_cell_types"
+                }
+            ],
+            "input": [
+                {
+                    "@id": "#param/container_image"
+                },
+                {
+                    "@id": "#param/config"
+                },
+                {
+                    "@id": "#param/data_dir"
+                },
+                {
+                    "@id": "#param/model_dir"
+                }
+            ],
+            "output": [
+                
+            ],
+            "step": [
+                {
+                    "@id": "#process-step/fine_tuning_cell_types"
+                }
+            ]
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow",
+            "@type": "ComputerLanguage",
+            "name": "Nextflow",
+            "identifier": "https://www.nextflow.io/",
+            "url": "https://www.nextflow.io/",
+            "version": "25.10.0"
+        },
+        {
+            "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf#software-application",
+            "@type": "SoftwareApplication",
+            "name": "Nextflow 25.10.0"
+        },
+        {
+            "@id": "#module/fine_tuning_cell_types",
+            "@type": "SoftwareApplication",
+            "name": "fine_tuning_cell_types",
+            "url": "file:///home/bh2025_scllms_p30/pipelines/modules/scgpt/test_fine_tuning_cell_types.nf"
+        },
+        {
+            "@id": "#param/container_image",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "container_image"
+        },
+        {
+            "@id": "#param/config",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "config"
+        },
+        {
+            "@id": "#param/data_dir",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "data_dir"
+        },
+        {
+            "@id": "#param/model_dir",
+            "@type": "FormalParameter",
+            "additionalType": "Text",
+            "conformsTo": {
+                "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+            },
+            "name": "model_dir"
+        },
+        {
+            "@id": "#process-step/fine_tuning_cell_types",
+            "@type": "HowToStep",
+            "workExample": {
+                "@id": "#module/fine_tuning_cell_types"
+            },
+            "position": 1
+        },
+        {
+            "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf#organize",
+            "@type": "OrganizeAction",
+            "agent": null,
+            "instrument": {
+                "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf#software-application"
+            },
+            "name": "Run of Nextflow 25.10.0",
+            "object": [
+                {
+                    "@id": "#process-control/fine_tuning_cell_types"
+                }
+            ],
+            "result": {
+                "@id": "#596cab9c-2d63-4db9-bc4c-4dce183b04b3"
+            },
+            "startTime": "2025-11-18T09:50:36.972276233+01:00",
+            "endTime": "2025-11-18T09:50:44.563612815+01:00"
+        },
+        {
+            "@id": "#596cab9c-2d63-4db9-bc4c-4dce183b04b3",
+            "@type": "CreateAction",
+            "agent": null,
+            "name": "Nextflow workflow run 596cab9c-2d63-4db9-bc4c-4dce183b04b3",
+            "startTime": "2025-11-18T09:50:36.972276233+01:00",
+            "endTime": "2025-11-18T09:50:44.563612815+01:00",
+            "instrument": {
+                "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf"
+            },
+            "object": [
+                {
+                    "@id": "#param/container_image/value"
+                },
+                {
+                    "@id": "#param/config/value"
+                },
+                {
+                    "@id": "#param/data_dir/value"
+                },
+                {
+                    "@id": "#param/model_dir/value"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/scripts/scgpt/config.yml"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/model/pan_cancer"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/data"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "silly_hilbert/save/out.txt"
+                }
+            ]
+        },
+        {
+            "@id": "https://spdx.org/licenses/MIT",
+            "@type": "CreativeWork"
+        },
+        {
+            "@id": "nextflow.config",
+            "@type": "File",
+            "name": "Resolved Nextflow configuration",
+            "description": "The resolved Nextflow configuration for the workflow run.",
+            "encodingFormat": "text/plain"
+        },
+        {
+            "@id": "#param/container_image/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/container_image"
+            },
+            "name": "container_image",
+            "value": "scgpt-scgpt:latest"
+        },
+        {
+            "@id": "#param/config/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/config"
+            },
+            "name": "config",
+            "value": "file:///home/bh2025_scllms_p30/pipelines/workflows/../scripts/scgpt/config.yml"
+        },
+        {
+            "@id": "#param/data_dir/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/data_dir"
+            },
+            "name": "data_dir",
+            "value": "file:///home/bh2025_scllms_p30/pipelines/workflows/../data"
+        },
+        {
+            "@id": "#param/model_dir/value",
+            "@type": "PropertyValue",
+            "exampleOfWork": {
+                "@id": "#param/model_dir"
+            },
+            "name": "model_dir",
+            "value": "file:///home/bh2025_scllms_p30/pipelines/workflows/../model/pan_cancer"
+        },
+        {
+            "@id": "#process-control/fine_tuning_cell_types",
+            "@type": "ControlAction",
+            "instrument": {
+                "@id": "#process-step/fine_tuning_cell_types"
+            },
+            "name": "Orchestrate process fine_tuning_cell_types",
+            "object": [
+                {
+                    "@id": "#task/ba953db9477544a55b990c7ae11eb2d5"
+                }
+            ]
+        },
+        {
+            "@id": "#task/ba953db9477544a55b990c7ae11eb2d5",
+            "@type": "CreateAction",
+            "name": "fine_tuning_cell_types (test_fine_tuning_cell_types)",
+            "instrument": {
+                "@id": "#module/fine_tuning_cell_types"
+            },
+            "agent": null,
+            "object": [
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/model/pan_cancer"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/scripts/scgpt/config.yml"
+                },
+                {
+                    "@id": "file:///home/bh2025_scllms_p30/pipelines/data"
+                }
+            ],
+            "result": [
+                {
+                    "@id": "#task/ba953db9477544a55b990c7ae11eb2d5/save/out.txt"
+                }
+            ],
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "#task/ba953db9477544a55b990c7ae11eb2d5/save/out.txt",
+            "@type": "CreativeWork",
+            "name": "save/out.txt",
+            "encodingFormat": "text/plain"
+        },
+        {
+            "@id": "#publish/ba953db9477544a55b990c7ae11eb2d5/save/out.txt",
+            "@type": "CreateAction",
+            "name": "publish",
+            "instrument": {
+                "@id": "test_scgpt_fine_tuning_cell_types_workflow.nf#software-application"
+            },
+            "object": {
+                "@id": "#task/ba953db9477544a55b990c7ae11eb2d5/save/out.txt"
+            },
+            "result": {
+                "@id": "silly_hilbert/save/out.txt"
+            },
+            "actionStatus": "http://schema.org/CompletedActionStatus"
+        },
+        {
+            "@id": "file:///home/bh2025_scllms_p30/pipelines/scripts/scgpt/config.yml",
+            "@type": "File",
+            "name": "config.yml",
+            "encodingFormat": "application/yaml"
+        },
+        {
+            "@id": "file:///home/bh2025_scllms_p30/pipelines/model/pan_cancer",
+            "@type": "Dataset",
+            "name": "pan_cancer"
+        },
+        {
+            "@id": "file:///home/bh2025_scllms_p30/pipelines/data",
+            "@type": "Dataset",
+            "name": "data"
+        },
+        {
+            "@id": "silly_hilbert/save/out.txt",
+            "@type": "File",
+            "name": "out.txt",
+            "encodingFormat": "text/plain"
+        }
+    ]
+}
